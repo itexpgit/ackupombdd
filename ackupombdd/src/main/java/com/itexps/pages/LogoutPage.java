@@ -24,7 +24,7 @@ public class LogoutPage extends BaseClass {
     @FindBy(xpath = "//b[@class='caret']")
     private WebElement acku;
     
-    @FindBy(xpath = "//*[@id=\"navbar\"]/ul[2]/li[6]/ul/li[4]/a")
+    @FindBy(xpath = "//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")
     private WebElement logout;
     
     
@@ -36,7 +36,7 @@ public class LogoutPage extends BaseClass {
     public void LogoutPage() {
         acku.click();
         WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"navbar\"]/ul[2]/li[6]/ul/li[4]/a")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")));
         logout.click();
         driver.close();
         driver.quit();
