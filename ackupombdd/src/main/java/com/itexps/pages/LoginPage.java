@@ -7,10 +7,13 @@ package com.itexps.pages;
 
 import com.itexps.util.BaseClass;
 import static com.itexps.util.BaseClass.driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
@@ -36,7 +39,9 @@ public class LoginPage extends BaseClass {
         }
     
     //Actions
-    public String validateLoginPageTitle() {
+    public String validateLoginPageTitle() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("email")));
         return driver.getTitle();
     }
     

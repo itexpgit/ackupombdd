@@ -40,7 +40,7 @@ public void user_is_on_login_page() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
     loginpage = new LoginPage();
     String loginpagetitle = loginpage.validateLoginPageTitle();
-    Assert.assertEquals("Inchin's Bamboo Garden - Pan Asian Cuisine", loginpagetitle);
+    Assert.assertEquals(prop.getProperty("title"), loginpagetitle);
 }
 
 @Then("^user enters emailid password and submit button$")
