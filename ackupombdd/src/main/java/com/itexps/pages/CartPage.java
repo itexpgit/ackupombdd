@@ -15,24 +15,35 @@ import org.openqa.selenium.support.PageFactory;
  *
  * @author Uma
  */
-public class LocationPage extends BaseClass {
+public class CartPage extends BaseClass {
     
     //Page Factory
-    @FindBy(xpath = ".//*[@id='location-list']/li[1]/h4/a")
-    private WebElement location;
-   
-    @FindBy(xpath = ".//*[@id='price-list-0']/ul/li/h5")
-    private WebElement mainmenu;
+    @FindBy(linkText ="Checkout")
+    private WebElement checkout;
     
     //Intializing the Page Object:
-    public LocationPage(){PageFactory.initElements(driver,this);
+    public CartPage(){PageFactory.initElements(driver,this);
         }
     
     //Actions
-    public ProductsPage LocationPage() {
-        location.click();
-        mainmenu.click();
-        return new ProductsPage();
+    public boolean verifyCheckoutbutton() {
+        return checkout.isDisplayed();
     }
+    
+        public void ClickCart() {
+        driver.get(prop.getProperty("url2"));
+        
+        
+               
+    }
+        public CheckOutPage  ClickCheckout() {
+        
+        checkout.click();
+        return new CheckOutPage();
+               
+    }
+    
+    
+   
     
 }

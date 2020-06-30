@@ -15,24 +15,27 @@ import org.openqa.selenium.support.PageFactory;
  *
  * @author Uma
  */
-public class LocationPage extends BaseClass {
+public class LogoutPage extends BaseClass {
     
     //Page Factory
-    @FindBy(xpath = ".//*[@id='location-list']/li[1]/h4/a")
-    private WebElement location;
-   
-    @FindBy(xpath = ".//*[@id='price-list-0']/ul/li/h5")
-    private WebElement mainmenu;
+    @FindBy(xpath = "//b[@class='caret']")
+    private WebElement acku;
+    
+    @FindBy(xpath = "//*[@id=\"navbar\"]/ul[2]/li[6]/ul/li[4]/a")
+    private WebElement logout;
+    
     
     //Intializing the Page Object:
-    public LocationPage(){PageFactory.initElements(driver,this);
+    public LogoutPage(){PageFactory.initElements(driver,this);
         }
     
     //Actions
-    public ProductsPage LocationPage() {
-        location.click();
-        mainmenu.click();
-        return new ProductsPage();
+    public void LogoutPage() {
+        acku.click();
+        logout.click();
+        driver.close();
+        driver.quit();
+        
     }
     
 }

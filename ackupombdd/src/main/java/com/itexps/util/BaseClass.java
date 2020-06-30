@@ -44,7 +44,7 @@ public class BaseClass {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().pageLoadTimeout(BaseUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(BaseUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-        driver.get(prop.getProperty("url"));
+        driver.get(prop.getProperty("url1"));
     }
     
     
