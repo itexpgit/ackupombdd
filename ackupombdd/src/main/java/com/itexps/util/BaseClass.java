@@ -39,10 +39,9 @@ public class BaseClass {
     public static void initialization(){
         System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--incognito");
+        options.addArguments("--window-size=1920,1080");
         options.addArguments("--start-maximized");
-        //options.addArguments("--window-size=1920,1080");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().pageLoadTimeout(BaseUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(BaseUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
