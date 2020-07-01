@@ -49,6 +49,7 @@ public class LoginPage extends BaseClass {
         emailid.sendKeys(em);
         password.sendKeys(pwd);
         submitBtn.click();
+        System.out.println("Login Completed");
         return new LocationPage();
         
     }

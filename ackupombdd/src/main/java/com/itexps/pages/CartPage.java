@@ -39,6 +39,7 @@ public class CartPage extends BaseClass {
         public CheckOutPage  ClickCheckout() {
         
         checkout.click();
+        System.out.println("Check Out Started");
         return new CheckOutPage();
                
     }

@@ -38,6 +38,7 @@ public class LogoutPage extends BaseClass {
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='navbar']/ul[2]/li[6]/ul/li[4]/a")));
         logout.click();
+        System.out.println("Logout Completed");
         driver.close();
         driver.quit();
         

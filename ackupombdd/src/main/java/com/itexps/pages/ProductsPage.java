@@ -45,6 +45,7 @@ public class ProductsPage extends BaseClass {
         noodlessection.click();
         hakkanoodles.click();
         tocart.click();
+        System.out.println("Item added to Cart");
         return new CartPage();
         
     }

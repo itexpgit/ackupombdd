@@ -70,6 +70,7 @@ public class CheckOutPage extends BaseClass {
         ccCvc.sendKeys(cv);
         phoneUS.sendKeys(phone);
         placeorder.click();
+        System.out.println("Order Placed");
         return new LogoutPage();
         
         

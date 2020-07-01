@@ -32,6 +32,7 @@ public class LocationPage extends BaseClass {
     public ProductsPage LocationPage() {
         location.click();
         mainmenu.click();
+        System.out.println("Location Selected");
         return new ProductsPage();
     }
     
